@@ -2,7 +2,7 @@
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT/)
 
-[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)]([![Github Releases (by Release)](https://img.shields.io/github/downloads/atom/atom/v0.190.0/total.svg)](https://github.com/ghost-/team-builder/releases))
+[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)](https://github.com/ghost-/team-builder/releases)
 
 [![GitHub stars](https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Star)](https://github.com/ghost-/team-builder/stargazers)
 
