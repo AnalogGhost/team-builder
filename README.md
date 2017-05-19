@@ -8,6 +8,11 @@ TODO:Add Screenshots
 
 ### Prerequisites
 
+You must have a working installation of the following.
+
+- Node.js
+- PostgreSQL
+
 ### Installation
 
 ### Security
@@ -19,6 +24,12 @@ The following environment variables need to be configured.
 | DATABASE_URL | PostgreSQL database connection URL. |
 
 ### Tests
+
+To run the tests type
+
+```
+npm test
+```
 
 ### Deployment
 
