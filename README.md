@@ -18,8 +18,6 @@ The following environment variables need to be configured.
 | :----------: | :---------------------------------: |
 | DATABASE_URL | PostgreSQL database connection URL. |
 
-
-
 ### Tests
 
 ### Deployment
@@ -28,8 +26,11 @@ The following environment variables need to be configured.
 
 ## Built With
 
+- [Chai](http://chaijs.com/)
+- [Mocha](https://mochajs.org/)
 - [Node.js](https://nodejs.org/)
 - [PostgreSQL](https://www.postgresql.org/)
+- [Supertest](https://github.com/visionmedia/supertest#readme)
 
 ## Team
 

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/ghost-/team-builder/issues"
   },
-  "homepage": "https://github.com/ghost-/team-builder#readme"
+  "homepage": "https://github.com/ghost-/team-builder#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.4.1",
+    "supertest": "^3.0.0"
+  }
 }
