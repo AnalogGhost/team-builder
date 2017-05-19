@@ -1,0 +1,19 @@
+{
+  "name": "group-builder",
+  "version": "0.1.0",
+  "description": "team-builder (Working Title) is a Node.js web application for creating randomized groupings from a list of people.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghost-/team-builder.git"
+  },
+  "author": "Mathew Brown & Katie Jenkins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ghost-/team-builder/issues"
+  },
+  "homepage": "https://github.com/ghost-/team-builder#readme"
+}
