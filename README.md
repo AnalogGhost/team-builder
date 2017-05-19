@@ -12,6 +12,14 @@ TODO:Add Screenshots
 
 ### Security
 
+The following environment variables need to be configured.
+
+|     Name     |             Description             |
+| :----------: | :---------------------------------: |
+| DATABASE_URL | PostgreSQL database connection URL. |
+
+
+
 ### Tests
 
 ### Deployment
@@ -24,8 +32,8 @@ TODO:Add Screenshots
 
 ## Team
 
-  - [Katie Jenkins](https://github.com/KatieAJenkins)
-  - [Mathew Brown](https://github.com/ghost-)
+- [Katie Jenkins](https://github.com/KatieAJenkins)
+- [Mathew Brown](https://github.com/ghost-)
 
 ## License
 
