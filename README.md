@@ -29,6 +29,7 @@ The following environment variables need to be configured.
 ## Built With
 
 - [Node.js](https://nodejs.org/)
+- [PostgreSQL](https://www.postgresql.org/)
 
 ## Team
 
