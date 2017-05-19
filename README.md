@@ -1,11 +1,5 @@
 # team-builder (Working Title)
 
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT/)
-
-[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)](https://github.com/ghost-/team-builder/releases)
-
-[![GitHub stars](https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Star)](https://github.com/ghost-/team-builder/stargazers)
-
 team-builder (Working Title) is a Node.js web application for creating randomized groupings from a list of people.  
 
 TODO:Add Screenshots
