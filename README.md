@@ -24,8 +24,11 @@ TODO:Add Screenshots
 
 ## Team
 
+  - [Katie Jenkins](https://github.com/KatieAJenkins)
+  - [Mathew Brown](https://github.com/ghost-)
+
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://gist.github.com/PurpleBooth/LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgements
