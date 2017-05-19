@@ -22,6 +22,7 @@ The following environment variables need to be configured.
 |     Name     |             Description             |
 | :----------: | :---------------------------------: |
 | DATABASE_URL | PostgreSQL database connection URL. |
+| TEST_DATABASE_NAME | The name you want PostgreSQL to use for the test database.  Defaults to `testdb` |
 
 ### Tests
 
