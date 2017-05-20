@@ -1,4 +1,3 @@
-
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('people_cohorts', table => {
     table.integer('peopleId').notNullable().references('people.id');
