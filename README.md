@@ -1,5 +1,7 @@
 # team-builder (Working Title)
 
+[![Build Status](https://travis-ci.org/ghost-/team-builder.svg?branch=master)](https://travis-ci.org/ghost-/team-builder)
+
 team-builder (Working Title) is a Node.js web application for creating randomized groupings from a list of people.  
 
 TODO:Add Screenshots
