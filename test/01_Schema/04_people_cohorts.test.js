@@ -6,17 +6,18 @@ const assert = require('chai').assert;
 const { suite, test } = require('mocha');
 const knex = require('../../knex');
 
-suite('Schema for groups should be built.', () => {
+suite('Schema for people_cohorts should be built.', () => {
 
-  test('The groups table should have columns, data types and parameters that match the required schema.', (done) => {
-    knex('groups').columnInfo()
+  test('The people_cohorts table should have columns, data types and parameters that match the required schema.', (done) => {
+    knex('people_cohorts').columnInfo()
       .then((actual) => {
         const expected = {
-          id: {
+
+          peopleId: {
             type: 'integer',
             maxLength: null,
             nullable: false,
-            defaultValue: 'nextval(\'groups_id_seq\'::regclass)'
+            defaultValue: null
           },
 
           cohortId: {
