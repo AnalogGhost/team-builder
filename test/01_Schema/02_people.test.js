@@ -6,23 +6,37 @@ const assert = require('chai').assert;
 const { suite, test } = require('mocha');
 const knex = require('../../knex');
 
-suite('Schema for cohorts should be built.', () => {
+suite('Schema for people should be built.', () => {
 
-  test('The cohorts table should have columns, data types and parameters that match the required schema.', (done) => {
-    knex('cohorts').columnInfo()
+  test('The people table should have columns, data types and parameters that match the required schema.', (done) => {
+    knex('people').columnInfo()
       .then((actual) => {
         const expected = {
           id: {
             type: 'integer',
             maxLength: null,
             nullable: false,
-            defaultValue: 'nextval(\'cohorts_id_seq\'::regclass)'
+            defaultValue: 'nextval(\'people_id_seq\'::regclass)'
           },
 
-          name: {
+          firstName: {
             type: 'character varying',
             maxLength: 255,
             nullable: false,
+            defaultValue: null
+          },
+
+          lastName: {
+            type: 'character varying',
+            maxLength: 255,
+            nullable: false,
+            defaultValue: null
+          },
+
+          email: {
+            type: 'character varying',
+            maxLength: 255,
+            nullable: true,
             defaultValue: null
           },
 
@@ -55,6 +69,7 @@ suite('Schema for cohorts should be built.', () => {
             `Column named - ${column} - is not the same.`
           );
         }
+        knex.destroy();
         done();
       })
       .catch((err) => {

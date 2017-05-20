@@ -7,15 +7,18 @@ const exec = require('child_process').exec;
 
 const { suite, test } = require('mocha');
 
+const knex = require('../../knex');
+
 
 suite('Test Database Should Be Dropped', function () {
 
-  this.timeout(0);
-
   before( done => {
-    drop_db( err => {
-      done(err);
+    knex.destroy().then(function() {
+      drop_db( err => {
+        done(err);
+      });
     });
+
 
   });
 
