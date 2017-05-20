@@ -8,7 +8,7 @@ const exec = require('child_process').exec;
 const { suite, test } = require('mocha');
 
 
-suite('Test Database Should Be Created', () => {
+suite('Test Database Should Be Created', function () {
 
   before( done => {
     prepare_db( err => {
@@ -24,16 +24,8 @@ suite('Test Database Should Be Created', () => {
 });
 
 function prepare_db(next){
-  let testDatabase = process.env.TEST_DATABASE_NAME || 'testdb';
-  exec('dropdb ' + testDatabase, function(err) {
-    if (err !== null && !err.toString().includes('does not exist')) {
-      return next(err);
-    }
-
-    exec('createdb ' + testDatabase, function(err){
-      if (err !== null) {
-      }
-      next(err);
-    });
+  const testDatabase = process.env.TEST_DATABASE_NAME || 'team_test';
+  exec('createdb ' + testDatabase, function(err){
+    next(err);
   });
 }

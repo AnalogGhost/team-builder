@@ -1,5 +1,7 @@
 # team-builder (Working Title)
 
+[![Build Status](https://travis-ci.org/ghost-/team-builder.svg?branch=master)](https://travis-ci.org/ghost-/team-builder)
+
 team-builder (Working Title) is a Node.js web application for creating randomized groupings from a list of people.  
 
 TODO:Add Screenshots
@@ -17,12 +19,13 @@ You must have a working installation of the following.
 
 ### Security
 
-The following environment variables need to be configured.
+You need to configure the following environment variables.
 
 |     Name     |             Description             |
 | :----------: | :---------------------------------: |
 | DATABASE_URL | PostgreSQL database connection URL. |
-| TEST_DATABASE_NAME | The name you want PostgreSQL to use for the test database.  Defaults to `testdb` |
+| DEV_DATABASE_NAME | The name you want PostgreSQL to use for the development database.  Defaults to `team_dev`
+| TEST_DATABASE_NAME | The name you want PostgreSQL to use for the test database.  Defaults to `team_test` |
 
 ### Tests
 
