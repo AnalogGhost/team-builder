@@ -1,5 +1,11 @@
 const router = require('express').Router();
-const cohorts = require('../../queries/cohorts');
+
+let cohortsDir = '../../queries/cohorts';
+
+if (process.env.NODE_ENV === 'test') {
+  cohortsDir = '../../queries/cohorts.mock';
+}
+const cohorts = require(cohortsDir);
 
 const ev = require('express-validation');
 const validations = require('../../validations/cohorts');

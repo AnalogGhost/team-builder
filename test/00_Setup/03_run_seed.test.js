@@ -9,21 +9,21 @@ const { suite, test } = require('mocha');
 
 const knex = require('../../knex');
 
-suite('Database Migrations Should Be Run', function () {
+suite('Database Seed Data Should Be Run', function () {
 
   before( done => {
 
-    knex.migrate.latest()
-    .then(() => {
-      done();
-    })
-    .catch( err => {
-      done(err);
-    });
+    knex.seed.run()
+      .then(() => {
+        done();
+      })
+      .catch((err) => {
+        done(err);
+      });
 
   });
 
-  test('Database Migrations Ran', done => {
+  test('Database Seed Data Ran', done => {
     done();
   });
 
