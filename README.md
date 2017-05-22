@@ -41,9 +41,13 @@ npm test
 
 ## Built With
 
+- [Body-parser](https://github.com/expressjs/body-parser#readme)
 - [Chai](http://chaijs.com/)
+- [Express.js](http://expressjs.com/)
+- [Knex.js](http://knexjs.org/)
 - [Mocha](https://mochajs.org/)
 - [Node.js](https://nodejs.org/)
+- [pg](https://github.com/brianc/node-postgres)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Supertest](https://github.com/visionmedia/supertest#readme)
 
