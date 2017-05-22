@@ -4,7 +4,7 @@
   "description": "team-builder (Working Title) is a Node.js web application for creating randomized groupings from a list of people.",
   "main": "index.js",
   "scripts": {
-    "heroku-postbuild": "knex migrate:latest",    
+    "heroku-postbuild": "knex migrate:latest",
     "start": "node index.js",
     "test": "mocha --recursive"
   },
@@ -24,6 +24,7 @@
     "supertest": "^3.0.0"
   },
   "dependencies": {
+    "express": "^4.15.3",
     "knex": "^0.13.0",
     "pg": "^6.2.2"
   }
