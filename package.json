@@ -26,6 +26,8 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
+    "express-validation": "^1.0.2",
+    "joi": "^10.5.0",
     "knex": "^0.13.0",
     "pg": "^6.2.2"
   }
