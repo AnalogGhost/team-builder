@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const knex = require('../knex');
+const knex = require('../../knex');
 
 router.get('/', (req,res,next) => {
   res.send('GET ALL ROUTE');
