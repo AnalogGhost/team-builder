@@ -44,7 +44,7 @@ npm test
 - [Body-parser](https://github.com/expressjs/body-parser#readme)
 - [Chai](http://chaijs.com/)
 - [Express.js](http://expressjs.com/)
-- [Knex.js](https://github.com/tgriesser/knex)
+- [Knex.js](http://knexjs.org/)
 - [Mocha](https://mochajs.org/)
 - [Node.js](https://nodejs.org/)
 - [pg](https://github.com/brianc/node-postgres)
