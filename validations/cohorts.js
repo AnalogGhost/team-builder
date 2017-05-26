@@ -37,6 +37,6 @@ module.exports.patch = {
     name: Joi.string().required()
   },
   params: {
-    id: Joi.number().integer()
+    id: Joi.number().integer().required()
   }
 };
