@@ -2,13 +2,7 @@
 
 const router = require('express').Router();
 
-//TODO only using for testing//////
-
 let peopleDir = '../../queries/people';
-
-// let peopleDir = '../../queries/people.mock';
-///////////////////////////////////
-
 if (process.env.NODE_ENV === 'test') {
   peopleDir = '../../queries/people.mock';
 }
@@ -40,12 +34,12 @@ router.post('/', ev(validations.post), (req,res,next) => {
   });
 });
 
-// router.patch('/:id', ev(validations.patch), (req,res,next) => {
-//   cohorts.update(req.params.id,req.body).then(() => {
-//     res.sendStatus(204);
-//   });
-// });
-//
+router.patch('/:id', ev(validations.patch), (req,res,next) => {
+  people.update(req.params.id,req.body).then(() => {
+    res.sendStatus(204);
+  });
+});
+
 // router.delete('/:id', ev(validations.delete), (req,res,next) => {
 //   cohorts.remove(req.params.id).then(() => {
 //     res.sendStatus(204);

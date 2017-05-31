@@ -40,7 +40,7 @@ module.exports.patch = {
     first_name: Joi.string().required(),
     last_name: Joi.string().required(),
     email: Joi.string().required(),
-    is_active: Joi.string().required()
+    is_active: Joi.boolean().required()
   },
   params: {
     id: Joi.number().integer().required()
