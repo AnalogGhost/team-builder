@@ -79,31 +79,35 @@ suite('Query functions for people should work.', () => {
     });
   });
 
-  // test('Delete function should work.', done => {
-  //   query.remove(3).then(() => {
-  //     query.list()
-  //     .then(result => {
-  //       let expected = [
-  //         {
-  //           "person_id": 1,
-  //           "name": "test1",
-  //           "is_active": true,
-  //           "created_at": new Date("2017-05-22T20:18:11.881Z"),
-  //           "updated_at": new Date("2017-05-22T20:18:11.881Z")
-  //         },
-  //         {
-  //           "person_id": 2,
-  //           "name": "test2",
-  //           "is_active": false,
-  //           "created_at": new Date("2017-05-22T20:18:11.881Z"),
-  //           "updated_at": new Date("2017-05-22T20:18:11.881Z")
-  //         },
-  //       ];
-  //       assert.deepEqual(result,expected);
-  //       done();
-  //     })
-  //     .catch(err => done(err));
-  //   });
-  // });
+  test('Delete function should work.', done => {
+    query.remove(3).then(() => {
+      query.list()
+      .then(result => {
+        let expected = [
+          {
+            "person_id": 2,
+            "first_name": "Katie",
+            "last_name": "Jenkins",
+            "email": "katie@gmail.com",
+            "is_active": true,
+            "created_at": new Date("2017-05-22T20:18:11.881Z"),
+            "updated_at": new Date("2017-05-22T20:18:11.881Z")
+          },
+          {
+            "person_id": 1,
+            "first_name": "Mat",
+            "last_name": "Brown",
+            "email": "mat@gmail.com",
+            "is_active": true,
+            "created_at": new Date("2017-05-22T20:18:11.881Z"),
+            "updated_at": new Date("2017-05-22T20:18:11.881Z")
+          }
+        ];
+        assert.deepEqual(result,expected);
+        done();
+      })
+      .catch(err => done(err));
+    });
+  });
 
 });
