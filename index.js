@@ -11,8 +11,10 @@ app.use(bodyParser.json());
 
 //API Routes
 const cohorts = require('./routes/api/cohorts');
+const people = require('./routes/api/people');
 
 app.use('/api/cohorts/', cohorts);
+app.use('/api/people/', people);
 
 //Static Files
 app.use(express.static('public'));
