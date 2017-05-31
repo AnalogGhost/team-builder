@@ -4,9 +4,9 @@ const router = require('express').Router();
 
 //TODO only using for testing//////
 
-// let peopleDir = '../../queries/people';
+let peopleDir = '../../queries/people';
 
-let peopleDir = '../../queries/people.mock';
+// let peopleDir = '../../queries/people.mock';
 ///////////////////////////////////
 
 if (process.env.NODE_ENV === 'test') {
@@ -17,8 +17,7 @@ const people = require(peopleDir);
 
 const ev = require('express-validation');
 
-//TODO validations for people.js
-const validations = require('../../validations/cohorts');
+const validations = require('../../validations/people');
 
 router.get('/', (req,res,next) => {
   people.list().then(result => {
@@ -35,12 +34,12 @@ router.get('/:id', ev(validations.get), (req,res,next) => {
   });
 });
 
-// router.post('/', ev(validations.post), (req,res,next) => {
-//   cohorts.create(req.body).then(() => {
-//     res.sendStatus(201);
-//   });
-// });
-//
+router.post('/', ev(validations.post), (req,res,next) => {
+  people.create(req.body).then(() => {
+    res.sendStatus(201);
+  });
+});
+
 // router.patch('/:id', ev(validations.patch), (req,res,next) => {
 //   cohorts.update(req.params.id,req.body).then(() => {
 //     res.sendStatus(204);

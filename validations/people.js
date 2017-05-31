@@ -27,14 +27,20 @@ module.exports.get = {
 module.exports.post = {
   options,
   body: {
-    name: Joi.string().required()
+    first_name: Joi.string().required(),
+    last_name: Joi.string().required(),
+    email: Joi.string().required(),
+    is_active: Joi.boolean().required()
   }
 };
 
 module.exports.patch = {
   options,
   body: {
-    name: Joi.string().required()
+    first_name: Joi.string().required(),
+    last_name: Joi.string().required(),
+    email: Joi.string().required(),
+    is_active: Joi.string().required()
   },
   params: {
     id: Joi.number().integer().required()
