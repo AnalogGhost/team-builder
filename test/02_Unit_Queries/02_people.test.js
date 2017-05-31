@@ -55,11 +55,11 @@ suite('Query functions for people should work.', () => {
     })
     .catch(err => done(err));
   });
-  //
-  // test('Create function should work with a valid object', done => {
-  //   query.create({name:'Test'}).then(result => done()).catch(err => done(err));
-  // });
-  //
+
+  test('Create function should work with a valid object', done => {
+    query.create({first_name:'Teddi', last_name:'Maull', email:'teddi@gmail.com', is_active:true}).then(result => done()).catch(err => done(err));
+  });
+
   // test('Update function should work with a valid object', done => {
   //   query.update(3,{name:'TestUpdated'}).then(() => {
   //     query.get(3).then(result => {
