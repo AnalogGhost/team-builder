@@ -2,14 +2,17 @@
 
 const router = require('express').Router();
 
-let peopleDir = '../../queries/people';
+// let peopleDir = '../../queries/people';
 
-//TODO: what is the mock? Need one for people? - rename
-// if (process.env.NODE_ENV === 'test') {
-//   cohortsDir = '../../queries/cohorts.mock';
-// }
+//TODO only using for testing
+let peopleDir = '../../queries/people.mock';
+
+if (process.env.NODE_ENV === 'test') {
+  peopleDir = '../../queries/people.mock';
+}
 
 const people = require(peopleDir);
+console.log(peopleDir);
 
 const ev = require('express-validation');
 
@@ -17,12 +20,11 @@ const ev = require('express-validation');
 // const validations = require('../../validations/cohorts');
 
 router.get('/', (req,res,next) => {
-  // people.list().then(result => {
-    console.log("working!");
-    // res.send(result);
-  // });
+  people.list().then(result => {
+    res.send(result);
+  });
 });
-//
+
 // router.get('/:id', ev(validations.get), (req,res,next) => {
 //   cohorts.get(req.params.id).then(result => {
 //     if (!result) {
