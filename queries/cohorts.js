@@ -9,21 +9,21 @@ module.exports = {
 };
 
 function create(cohort) {
-  return knex('cohorts').insert(cohort);
+  return knex('cohort').insert(cohort);
 }
 
 function get(id) {
-  return knex('cohorts').where({id:id}).first();
+  return knex('cohort').where({cohort_id:id}).first();
 }
 
 function list() {
-  return knex('cohorts').orderBy('name');
+  return knex('cohort').orderBy('name');
 }
 
 function remove(id) {
-  return knex('cohorts').where({id:id}).del();
+  return knex('cohort').where({cohort_id:id}).del();
 }
 
 function update(id,cohort) {
-  return knex('cohorts').update(cohort).where({id:id});
+  return knex('cohort').update(cohort).where({cohort_id:id});
 }

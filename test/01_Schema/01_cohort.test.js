@@ -6,41 +6,27 @@ const assert = require('chai').assert;
 const { suite, test } = require('mocha');
 const knex = require('../../knex');
 
-suite('Schema for people should be built.', () => {
+suite('Schema for cohort should be built.', () => {
 
-  test('The people table should have columns, data types and parameters that match the required schema.', (done) => {
-    knex('people').columnInfo()
+  test('The cohort table should have columns, data types and parameters that match the required schema.', (done) => {
+    knex('cohort').columnInfo()
       .then((actual) => {
         const expected = {
-          id: {
+          cohort_id: {
             type: 'integer',
             maxLength: null,
             nullable: false,
-            defaultValue: 'nextval(\'people_id_seq\'::regclass)'
+            defaultValue: 'nextval(\'cohort_cohort_id_seq\'::regclass)'
           },
 
-          firstName: {
+          name: {
             type: 'character varying',
             maxLength: 255,
             nullable: false,
             defaultValue: null
           },
 
-          lastName: {
-            type: 'character varying',
-            maxLength: 255,
-            nullable: false,
-            defaultValue: null
-          },
-
-          email: {
-            type: 'character varying',
-            maxLength: 255,
-            nullable: true,
-            defaultValue: null
-          },
-
-          isActive: {
+          is_active: {
             type: 'boolean',
             maxLength: null,
             nullable: false,

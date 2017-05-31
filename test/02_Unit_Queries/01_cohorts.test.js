@@ -7,15 +7,15 @@ const { suite, test } = require('mocha');
 const server = require('../../index');
 const query = require('../../queries/cohorts.js');
 
-suite('Query functions for cohorts should work.', () => {
+suite('Query functions for cohort should work.', () => {
 
   test('Get function with a valid id should work.', done => {
     query.get(1)
     .then(result => {
       let expected = {
-            "id": 1,
+            "cohort_id": 1,
             "name": "test1",
-            "isActive": true,
+            "is_active": true,
             "created_at": new Date("2017-05-22T20:18:11.881Z"),
             "updated_at": new Date("2017-05-22T20:18:11.881Z")
       };
@@ -30,16 +30,16 @@ suite('Query functions for cohorts should work.', () => {
     .then(result => {
       let expected = [
         {
-          "id": 1,
+          "cohort_id": 1,
           "name": "test1",
-          "isActive": true,
+          "is_active": true,
           "created_at": new Date("2017-05-22T20:18:11.881Z"),
           "updated_at": new Date("2017-05-22T20:18:11.881Z")
         },
         {
-          "id": 2,
+          "cohort_id": 2,
           "name": "test2",
-          "isActive": false,
+          "is_active": false,
           "created_at": new Date("2017-05-22T20:18:11.881Z"),
           "updated_at": new Date("2017-05-22T20:18:11.881Z")
         },
@@ -61,9 +61,9 @@ suite('Query functions for cohorts should work.', () => {
         delete result.updated_at;
 
         let expected = {
-          "id": 3,
+          "cohort_id": 3,
           "name": "TestUpdated",
-          "isActive": true
+          "is_active": true
         };
         assert.deepEqual(result,expected);
         done();
@@ -77,16 +77,16 @@ suite('Query functions for cohorts should work.', () => {
       .then(result => {
         let expected = [
           {
-            "id": 1,
+            "cohort_id": 1,
             "name": "test1",
-            "isActive": true,
+            "is_active": true,
             "created_at": new Date("2017-05-22T20:18:11.881Z"),
             "updated_at": new Date("2017-05-22T20:18:11.881Z")
           },
           {
-            "id": 2,
+            "cohort_id": 2,
             "name": "test2",
-            "isActive": false,
+            "is_active": false,
             "created_at": new Date("2017-05-22T20:18:11.881Z"),
             "updated_at": new Date("2017-05-22T20:18:11.881Z")
           },
