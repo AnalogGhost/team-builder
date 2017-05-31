@@ -9,8 +9,8 @@ module.exports = {
 let data = [
   {
     "person_id": 1,
-    "first_name": "person1First",
-    "last_name": "person1Last",
+    "first_name": "Mat",
+    "last_name": "Brown",
     "email": "test@gmail.com",
     "is_active": true,
     "created_at": "2017-05-22T20:18:11.881Z",
@@ -18,8 +18,8 @@ let data = [
   },
   {
     "person_id": 2,
-    "first_name": "person2First",
-    "last_name": "person2Last",
+    "first_name": "Katie",
+    "last_name": "Jenkins",
     "email": "test@gmail.com",
     "is_active": true,
     "created_at": "2017-05-22T20:18:11.881Z",

@@ -19,10 +19,9 @@ function get(id) {
 }
 
 function list(orderBy) {
-  //TODO fix first_name error
-  // orderBy = orderBy || first_name;
-  // return knex('person').orderBy(orderBy);
-    return knex('person').orderBy('first_name');
+  //TODO fix first_name error, not ordering properly
+  orderBy = orderBy || first_name;
+  return knex('person').orderBy(orderBy);
 }
 
 function remove(id) {
