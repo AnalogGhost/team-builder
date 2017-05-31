@@ -40,10 +40,10 @@ router.patch('/:id', ev(validations.patch), (req,res,next) => {
   });
 });
 
-// router.delete('/:id', ev(validations.delete), (req,res,next) => {
-//   cohorts.remove(req.params.id).then(() => {
-//     res.sendStatus(204);
-//   });
-// });
+router.delete('/:id', ev(validations.delete), (req,res,next) => {
+  people.remove(req.params.id).then(() => {
+    res.sendStatus(204);
+  });
+});
 
 module.exports = router;
