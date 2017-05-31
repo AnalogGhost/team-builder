@@ -60,23 +60,25 @@ suite('Query functions for people should work.', () => {
     query.create({first_name:'Teddi', last_name:'Maull', email:'teddi@gmail.com', is_active:true}).then(result => done()).catch(err => done(err));
   });
 
-  // test('Update function should work with a valid object', done => {
-  //   query.update(3,{name:'TestUpdated'}).then(() => {
-  //     query.get(3).then(result => {
-  //       delete result.created_at;
-  //       delete result.updated_at;
-  //
-  //       let expected = {
-  //         "person_id": 3,
-  //         "name": "TestUpdated",
-  //         "is_active": true
-  //       };
-  //       assert.deepEqual(result,expected);
-  //       done();
-  //     });
-  //   });
-  // });
-  //
+  test('Update function should work with a valid object', done => {
+    query.update(3,{first_name:'TestUpdated', last_name:"TestUpdated", email:"TestUpdated@gmail.com", is_active:false}).then(() => {
+      query.get(3).then(result => {
+        delete result.created_at;
+        delete result.updated_at;
+
+        let expected = {
+          "person_id": 3,
+          "first_name": "TestUpdated",
+          "last_name": "TestUpdated",
+          "email": "TestUpdated@gmail.com",
+          "is_active": false
+        };
+        assert.deepEqual(result,expected);
+        done();
+      });
+    });
+  });
+
   // test('Delete function should work.', done => {
   //   query.remove(3).then(() => {
   //     query.list()
