@@ -14,16 +14,16 @@ suite('CRUD routes for cohorts resource should be created.', () => {
 
     let data = [
       {
-        "id": 1,
+        "cohort_id": 1,
         "name": "test1",
-        "isActive": true,
+        "is_active": true,
         "created_at": "2017-05-22T20:18:11.881Z",
         "updated_at": "2017-05-22T20:18:11.881Z"
       },
       {
-        "id": 2,
+        "cohort_id": 2,
         "name": "test2",
-        "isActive": false,
+        "is_active": false,
         "created_at": "2017-05-22T20:18:11.881Z",
         "updated_at": "2017-05-22T20:18:11.881Z"
       },
@@ -39,9 +39,9 @@ suite('CRUD routes for cohorts resource should be created.', () => {
 
   test('GET /api/cohorts/1 should return the id,name,isActive,created_at and updated_at of cohort with id 1.', (done) => {
     let data = {
-      "id": 1,
+      "cohort_id": 1,
       "name": "test1",
-      "isActive": true,
+      "is_active": true,
       "created_at": "2017-05-22T20:18:11.881Z",
       "updated_at": "2017-05-22T20:18:11.881Z"
     };

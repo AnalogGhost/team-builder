@@ -8,16 +8,16 @@ module.exports = {
 
 const data = [
   {
-    "id": 1,
+    "cohort_id": 1,
     "name": "test1",
-    "isActive": true,
+    "is_active": true,
     "created_at": "2017-05-22T20:18:11.881Z",
     "updated_at": "2017-05-22T20:18:11.881Z"
   },
   {
-    "id": 2,
+    "cohort_id": 2,
     "name": "test2",
-    "isActive": false,
+    "is_active": false,
     "created_at": "2017-05-22T20:18:11.881Z",
     "updated_at": "2017-05-22T20:18:11.881Z"
   },

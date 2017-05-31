@@ -8,23 +8,23 @@ module.exports = {
   update
 };
 
-function create(cohort) {
-  return knex('people').insert(cohort);
+function create(person) {
+  return knex('person').insert(person);
 }
 
 function get(id) {
-  return knex('people').where({id:id}).first();
+  return knex('person').where({person_id:id}).first();
 }
 
 function list(orderBy) {
   orderBy = orderBy || firstName;
-  return knex('people').orderBy(orderBy);
+  return knex('person').orderBy(orderBy);
 }
 
 function remove(id) {
-  return knex('people').where({id:id}).del();
+  return knex('person').where({person_id:id}).del();
 }
 
 function update(id,cohort) {
-  return knex('people').update(cohort).where({id:id});
+  return knex('person').update(cohort).where({person_id:id});
 }
