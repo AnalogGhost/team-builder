@@ -11,23 +11,23 @@ let data = [
     "person_id": 1,
     "first_name": "Mat",
     "last_name": "Brown",
-    "email": "test@gmail.com",
+    "email": "mat@gmail.com",
     "is_active": true,
-    "created_at": "2017-05-22T20:18:11.881Z",
-    "updated_at": "2017-05-22T20:18:11.881Z"
+    "created_at": "[Date: 2017-05-22T20:18:11.881Z]",
+    "updated_at": "[Date: 2017-05-22T20:18:11.881Z]"
   },
   {
     "person_id": 2,
     "first_name": "Katie",
     "last_name": "Jenkins",
-    "email": "test@gmail.com",
+    "email": "katie@gmail.com",
     "is_active": true,
-    "created_at": "2017-05-22T20:18:11.881Z",
-    "updated_at": "2017-05-22T20:18:11.881Z"
+    "created_at": "[Date: 2017-05-22T20:18:11.881Z]",
+    "updated_at": "[Date: 2017-05-22T20:18:11.881Z]"
   },
 ];
 
-function create(cohort) {
+function create(person) {
   return Promise.resolve();
 }
 
@@ -43,6 +43,6 @@ function remove(id) {
   return Promise.resolve();
 }
 
-function update(id,cohort) {
+function update(id,person) {
   return Promise.resolve();
 }

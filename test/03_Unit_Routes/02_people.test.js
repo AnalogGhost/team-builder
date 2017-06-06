@@ -15,12 +15,12 @@ suite('CRUD routes for people resource should be created.', () => {
     let data = [
       {
         "person_id": 1,
-        "name": "Mat",
+        "first_name": "Mat",
         "last_name": "Brown",
         "email": "mat@gmail.com",
         "is_active": true,
-        "created_at": new Date("2017-05-22T20:18:11.881Z"),
-        "updated_at": new Date("2017-05-22T20:18:11.881Z")
+        "created_at": "[Date: 2017-05-22T20:18:11.881Z]",
+        "updated_at": "[Date: 2017-05-22T20:18:11.881Z]"
       },
       {
         "person_id": 2,
@@ -28,8 +28,8 @@ suite('CRUD routes for people resource should be created.', () => {
         "last_name": "Jenkins",
         "email": "katie@gmail.com",
         "is_active": true,
-        "created_at": new Date("2017-05-22T20:18:11.881Z"),
-        "updated_at": new Date("2017-05-22T20:18:11.881Z")
+        "created_at": "[Date: 2017-05-22T20:18:11.881Z]",
+        "updated_at": "[Date: 2017-05-22T20:18:11.881Z]"
       },
     ];
 
@@ -48,15 +48,15 @@ suite('CRUD routes for people resource should be created.', () => {
       "last_name": "Brown",
       "email": "mat@gmail.com",
       "is_active": true,
-      "created_at": new Date("2017-05-22T20:18:11.881Z"),
-      "updated_at": new Date("2017-05-22T20:18:11.881Z")
+      "created_at": "[Date: 2017-05-22T20:18:11.881Z]",
+      "updated_at": "[Date: 2017-05-22T20:18:11.881Z]"
     };
     request(server)
       .get('/api/people/1')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, data, done);
-      
+
   });
 
   test('GET /api/people/:id with an invalid id should return a 404 status code.', done => {

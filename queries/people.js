@@ -27,6 +27,6 @@ function remove(id) {
   return knex('person').where({person_id:id}).del();
 }
 
-function update(id,cohort) {
-  return knex('person').update(cohort).where({person_id:id});
+function update(id,person) {
+  return knex('person').update(person).where({person_id:id});
 }
