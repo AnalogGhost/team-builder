@@ -18,15 +18,14 @@ function get(id) {
   return knex('person').where({person_id:id}).first();
 }
 
-function list(orderBy) {
-  orderBy = orderBy || 'first_name';
-  return knex('person').orderBy(orderBy);
+function list() {
+  return knex('person').orderBy('first_name');
 }
 
 function remove(id) {
   return knex('person').where({person_id:id}).del();
 }
 
-function update(id,person) {
+function update(id, person) {
   return knex('person').update(person).where({person_id:id});
 }

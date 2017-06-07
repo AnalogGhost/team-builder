@@ -2,11 +2,9 @@
 
 process.env.NODE_ENV = 'test';
 
-
 const { suite, test } = require('mocha');
 const request = require('supertest');
 const server = require('../../index');
-
 
 suite('CRUD routes for people resource should be created.', () => {
 
@@ -38,7 +36,6 @@ suite('CRUD routes for people resource should be created.', () => {
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, data, done);
-
   });
 
   test('GET /api/people/1 should return the id,name,is_active,created_at and updated_at of people with id 1.', (done) => {
@@ -51,6 +48,7 @@ suite('CRUD routes for people resource should be created.', () => {
       "created_at": "[Date: 2017-05-22T20:18:11.881Z]",
       "updated_at": "[Date: 2017-05-22T20:18:11.881Z]"
     };
+
     request(server)
       .get('/api/people/1')
       .set('Accept', 'application/json')
@@ -91,7 +89,7 @@ suite('CRUD routes for people resource should be created.', () => {
     .expect(400, done);
   });
 
-  test('POST /api/people with an invalid object (no name) should return a 400 status code.', done => {
+  test('POST /api/people with an invalid object (no first_name) should return a 400 status code.', done => {
   request(server)
     .post('/api/people')
     .set('Accept', 'text/plain')
@@ -104,7 +102,7 @@ suite('CRUD routes for people resource should be created.', () => {
   request(server)
     .patch('/api/people/1')
     .set('Accept', 'text/plain')
-    .send({name: 'TEST POST' })
+    .send({last_name: 'TEST POST'})
     .expect(204, done);
   });
 
@@ -119,7 +117,7 @@ suite('CRUD routes for people resource should be created.', () => {
   request(server)
     .patch('/api/people/1')
     .set('Accept', 'text/plain')
-    .send({name: 'TEST POST', invalid: 'invalid' })
+    .send({first_name: 'TEST POST', invalid: 'invalid' })
     .expect('Content-Type', /json/)
     .expect(400, done);
   });
