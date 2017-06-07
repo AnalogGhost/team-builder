@@ -61,13 +61,13 @@ suite('Query functions for people should work.', () => {
   });
 
   test('Update function should work with a valid object', done => {
-    query.update(3,{first_name:'TestUpdated', last_name:"TestUpdated", email:"TestUpdated@gmail.com", is_active:false}).then(() => {
+    query.update(3,{first_name:'TestUpdated', last_name:"TestUpdated", email:"TestUpdated@gmail.com", is_active:false, created_at: new Date("2017-05-22T20:18:11.881Z"), "updated_at": new Date("2017-05-22T20:18:11.881Z")}).then(() => {
       query.get(3).then(result => {
         delete result.created_at;
         delete result.updated_at;
 
         let expected = {
-          "person_id": 1,
+          "person_id": 3,
           "first_name": "TestUpdated",
           "last_name": "TestUpdated",
           "email": "TestUpdated@gmail.com",
