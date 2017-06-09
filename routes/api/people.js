@@ -35,7 +35,10 @@ router.post('/', ev(validations.post), (req,res,next) => {
 });
 
 router.patch('/:id', ev(validations.patch), (req,res,next) => {
-  people.update(req.params.id,req.body).then(() => {
+  if(Object.keys(req.body).length === 0){
+    return res.sendStatus(400);
+  }
+  people.update(req.params.id, req.body).then(() => {
     res.sendStatus(204);
   });
 });
