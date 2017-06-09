@@ -68,7 +68,10 @@ suite('CRUD routes for people resource should be created.', () => {
   request(server)
     .post('/api/people')
     .set('Accept', 'text/plain')
-    .send({name: 'TEST POST' })
+    .send({
+      first_name: 'Test First Name',
+      last_name: 'Test Last Name'
+      })
     .expect('Content-Type', /text\/plain/)
     .expect(201, done);
   });
@@ -84,7 +87,7 @@ suite('CRUD routes for people resource should be created.', () => {
   request(server)
     .post('/api/people')
     .set('Accept', 'text/plain')
-    .send({name: 'TEST POST', invalid: 'invalid' })
+    .send({first_name: 'TEST POST', invalid: 'invalid' })
     .expect('Content-Type', /json/)
     .expect(400, done);
   });
@@ -102,7 +105,7 @@ suite('CRUD routes for people resource should be created.', () => {
   request(server)
     .patch('/api/people/1')
     .set('Accept', 'text/plain')
-    .send({last_name: 'TEST POST'})
+    .send({first_name: 'TEST POST'})
     .expect(204, done);
   });
 
@@ -122,12 +125,12 @@ suite('CRUD routes for people resource should be created.', () => {
     .expect(400, done);
   });
 
-  test('PATCH /api/people/1 with an invalid object (no name) should return a 400 status code.', done => {
+  test('PATCH /api/people/1 with an invalid object (empty object) should return a 400 status code.', done => {
   request(server)
     .patch('/api/people/1')
     .set('Accept', 'text/plain')
     .send({})
-    .expect('Content-Type', /json/)
+    .expect('Content-Type', /text\/plain/)
     .expect(400, done);
   });
 

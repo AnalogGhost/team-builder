@@ -45,6 +45,6 @@ function remove(id) {
   return Promise.resolve();
 }
 
-function update(id,person) {
+function update(id, person) {
   return Promise.resolve();
 }
