@@ -29,18 +29,18 @@ module.exports.post = {
   body: {
     first_name: Joi.string().required(),
     last_name: Joi.string().required(),
-    email: Joi.string().required(),
-    is_active: Joi.boolean().required()
+    email: Joi.string(),
+    is_active: Joi.boolean()
   }
 };
 
 module.exports.patch = {
   options,
   body: {
-    first_name: Joi.string().required(),
-    last_name: Joi.string().required(),
-    email: Joi.string().required(),
-    is_active: Joi.boolean().required()
+    first_name: Joi.string(),
+    last_name: Joi.string(),
+    email: Joi.string(),
+    is_active: Joi.boolean()
   },
   params: {
     id: Joi.number().integer().required()

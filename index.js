@@ -8,7 +8,6 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-
 //API Routes
 const cohorts = require('./routes/api/cohorts');
 const people = require('./routes/api/people');
