@@ -7,7 +7,7 @@ if (process.env.NODE_ENV === 'test') {
 }
 const cohorts = require(cohortsDir);
 
-const ev = require('express-validation');
+const { validate } = require('express-validation');
 const validations = require('../../validations/cohorts');
 
 router.get('/', (req,res,next) => {
@@ -16,7 +16,7 @@ router.get('/', (req,res,next) => {
   });
 });
 
-router.get('/:id', ev(validations.get), (req,res,next) => {
+router.get('/:id', validate(validations.get), (req,res,next) => {
   cohorts.get(req.params.id).then(result => {
     if (!result) {
       return res.sendStatus(404);
@@ -25,19 +25,19 @@ router.get('/:id', ev(validations.get), (req,res,next) => {
   });
 });
 
-router.post('/', ev(validations.post), (req,res,next) => {
+router.post('/', validate(validations.post), (req,res,next) => {
   cohorts.create(req.body).then(() => {
     res.sendStatus(201);
   });
 });
 
-router.patch('/:id', ev(validations.patch), (req,res,next) => {
+router.patch('/:id', validate(validations.patch), (req,res,next) => {
   cohorts.update(req.params.id,req.body).then(() => {
     res.sendStatus(204);
   });
 });
 
-router.delete('/:id', ev(validations.delete), (req,res,next) => {
+router.delete('/:id', validate(validations.delete), (req,res,next) => {
   cohorts.remove(req.params.id).then(() => {
     res.sendStatus(204);
   });

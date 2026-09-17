@@ -21,8 +21,9 @@ app.use(express.static('public'));
 //Errors
 
 app.use((err, _req, res, _next) => {
-  if (err.status) {
-    return res.status(err.status).send(err);
+  const status = err.status || err.statusCode;
+  if (status) {
+    return res.status(status).send(err);
   }
 
   console.error(err);

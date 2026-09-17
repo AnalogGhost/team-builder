@@ -1,42 +1,30 @@
 'use strict';
 
-const Joi = require('joi');
-
-const options = {
-    allowUnknownBody: false,
-    allowUnknownHeaders: false,
-    allowUnknownQuery: false,
-    allowUnknownParams: false,
-    allowUnknownCookies: false
-  };
+const { Joi } = require('express-validation');
 
 module.exports.delete = {
-  options,
-  params: {
+  params: Joi.object({
     id: Joi.number().integer().required()
-  }
+  })
 };
 
 module.exports.get = {
-  options,
-  params: {
+  params: Joi.object({
     id: Joi.number().integer()
-  }
+  })
 };
 
 module.exports.post = {
-  options,
-  body: {
+  body: Joi.object({
     name: Joi.string().required()
-  }
+  })
 };
 
 module.exports.patch = {
-  options,
-  body: {
+  body: Joi.object({
     name: Joi.string().required()
-  },
-  params: {
+  }),
+  params: Joi.object({
     id: Joi.number().integer().required()
-  }
+  })
 };
